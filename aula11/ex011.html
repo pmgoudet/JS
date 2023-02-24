@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfândega</title>
+</head>
+<body>
+    <h1>Cidadania</h1>
+    Em que país tu resides? <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Decifra-me" onclick="cidadania()">
+    <div id="res"></div>
+
+
+
+    <script>
+        function cidadania() {
+            var pais = window.document.querySelector("input#txtpais")
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `Você mora no ${pais.value}.` 
+
+            if (pais.value == 'Brasil') {
+                res.innerHTML += `<br>Você é nosso, Naldo!`
+            }
+
+            else {
+                res.innerHTML += `<br>ESTRANGEIRO! Volta pra tua Terra!`
+            }
+        }
+    </script>
+
+</body>
+</html>

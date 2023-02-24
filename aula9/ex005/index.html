@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body{ 
+            background-color: rgb(109, 109, 192);
+            color: white;
+            font: normal 12pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM DOM DOM DOM DOM DOM <br> tava aqui no baile escutando aquele som</h1>
+    <p>Aqui vai o resultado</p>
+    <p>aprendendo a usar <strong>DOM</strong> em JS</p>
+    <div>Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0] // esse número zero mostra qual dos <p> a gente quer usar. zero é o primeiro
+        window.document.write('Está escrito assim: ' + p1.innerText)
+    </script>
+</body>
+</html>
