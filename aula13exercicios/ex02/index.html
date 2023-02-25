@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificador de idade</title>
-    <link rel="stylesheet" href="idade.css">
+    <link rel="stylesheet" href="css/idade.css">
 </head>
 <body>
     <h1>Verificador de Idade</h1>
 
     <section>
-        <p><label for="ano">Ano de nascimento </label><input type="number" name="ano" id="ano"></p> 
-        <p>
-            Sexo <input type="radio" name="masc" id="masc" value="Masculino" ><label for="masc"> Masculino </label>
-            <input type="radio" name="fem" id="fem" value="Feminino" ><label for="masc"> Feminino </label>
+        <p><label for="ano">Ano de nascimento: </label><input type="number" name="ano" id="ano"></p> 
+        <p>Sexo: <input type="radio" name="sexo" id="masc" value="Masculino" ><label for="masc"> Masculino </label>
+        <input type="radio" name="sexo" id="fem" value="Feminino" ><label for="fem"> Feminino </label>
         </p>
+        <input type="button" value="Verificar" onclick="verificar()">
     </section>
 
+    
 </body>
 </html>
