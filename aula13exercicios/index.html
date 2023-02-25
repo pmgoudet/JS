@@ -14,13 +14,16 @@
         body, html {
             width: 100%;
             height: 100%;
-            background-color: #519da5;            
+            background-color: #519da5;  
+            margin: 0;
+            padding: 0;          
         }
 
         h1 {
             text-align: center;
-            padding: 10px;
+            padding: 60px 0px 30px 0px;
             color: white;
+            margin: 0;
         }
 
         section {
@@ -34,14 +37,15 @@
             box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
         } 
 
-        div#hora {
+        div#msg {
             margin-top: 10px;
             margin-bottom: 30px;
             font-size: 20px;
             color: black;
+
         }
 
-        div#imagem > img {
+        div#foto > img {
             width: 200px;
             border-radius: 150px;
         }
@@ -55,13 +59,13 @@
     </style>
 
 </head>
-<body>
+<body onload="carregar()">
     
     <h1>Hora do Dia</h1>
 
     <section>
-        <div id="hora"></div>
-        <div id="imagem"><img src="imagens/manha.jpg" alt="imagem"></div>
+        <div id="msg">g</div>
+        <div id="foto"><img id="imagem" src="imagens/madrugada.jpg" alt="imagem"></div>
     </section>
 
     <footer>
@@ -70,17 +74,35 @@
 
 
     <script>
-        var horario = new Date()
-        var agora = horario.getHours()
+        function carregar() {
+        
+            var msg = window.document.getElementById('msg')
+            var img = window.document.getElementById('imagem')
 
-        if (agora < 12) {
-            hora.innerHTML = `Agora são ${agora} horas.`
-            img.src = "imagens/madrugada.jpg"
+            var data = new Date()
+            var hora = data.getHours()
 
+            msg.innerHTML = `Agora são ${hora} horas.`
             
-        }
+            if (hora < 6) {  
+                // vai dormir
+                img.src = 'imagens/madrugada.jpg'
+                window.document.body.style.backgroundColor = '#01071a'
+            } else if (hora < 12) { 
+                // bom dia
+                img.src = 'imagens/manha.jpg' 
+                window.document.body.style.backgroundColor = '#6da9b1'
+            } else if (hora < 19) { 
+                // boa tarde
+                img.src = 'imagens/tarde.jpg'
+                window.document.body.style.backgroundColor = '#fea258'
+            } else { 
+                // boa noite
+                img.src = 'imagens/noite.jpg'
+                window.document.body.style.backgroundColor = '#12211a'
+            }
+    }
 
-       
 
     </script>
 
