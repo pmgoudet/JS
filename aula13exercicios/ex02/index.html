@@ -11,13 +11,24 @@
     <h1>Verificador de Idade</h1>
 
     <section>
-        <p><label for="ano">Ano de nascimento: </label><input type="number" name="ano" id="ano"></p> 
-        <p>Sexo: <input type="radio" name="sexo" id="masc" value="Masculino" ><label for="masc"> Masculino </label>
-        <input type="radio" name="sexo" id="fem" value="Feminino" ><label for="fem"> Feminino </label>
-        </p>
-        <input type="button" value="Verificar" onclick="verificar()">
+        <div id="txt">
+            <p><label for="ano">Ano de nascimento: </label><input type="number" name="ano" id="ano"></p>
+            <p>Sexo: <input class="sexo" type="radio" name="sexo" id="masc" value="Masculino" checked><label for="masc"> Masculino </label>
+            <input class="sexo" type="radio" name="sexo" id="fem" value="Feminino"><label for="fem"> Feminino </label>
+            </p>
+            <p><input id="botao" type="button" value="Verificar" onclick="verificar()"></p>
+            
+        </div>
+        
+        <div id="foto">
+            <p id="res">Preencha os dados acima para ver o resultado.</p>
+            <img id="img" src="imagens/maposentada.jpg" alt="Imagem"></div>
     </section>
 
-    
+    <footer>
+        <p> &copy; pedrao </p>
+    </footer>
+
+    <script type="text/javascript" src="js/meu-arquivo.js"></script>
 </body>
 </html>
