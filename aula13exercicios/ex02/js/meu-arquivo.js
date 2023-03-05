@@ -29,5 +29,6 @@ function verificar() {
         img.src = 'imagens/tumulo.jpg'
     }
     
+    // <img id="img" src="imagens/maposentada.jpg" alt="Imagem"></div>
 
 }
