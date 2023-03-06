@@ -8,20 +8,30 @@
     <link rel="stylesheet" href="css/idade.css">
 </head>
 <body>
-    <h1>Verificador de Idade</h1>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
 
     <section>
         <div id="txt">
-            <p><label for="ano">Ano de nascimento: </label><input type="number" name="ano" id="ano"></p>
-            <p>Sexo: <input class="sexo" type="radio" name="radsex" id="masc" value="Masculino" checked><label for="masc"> Masculino </label>
-            <input class="sexo" type="radio" name="radsex" id="fem" value="Feminino"><label for="fem"> Feminino </label>
+            <p>
+                <label for="ano">Ano de nascimento: </label>
+                <input type="number" name="ano" id="ano">
             </p>
-            <p><input id="botao" type="button" value="Verificar" onclick="verificar()"></p>
+            <p>Sexo: 
+                <input class="sexo" type="radio" name="radsex" id="masc" value="Masculino" checked>
+                <label for="masc"> Masculino </label>
+                <input class="sexo" type="radio" name="radsex" id="fem" value="Feminino">
+                <label for="fem"> Feminino </label>
+            </p>
+            <p>
+                <input id="botao" type="button" value="Verificar" onclick="verificar()">
+            </p>
             
         </div>
-        
         <div id="foto">
             <p id="res">Preencha os dados acima para ver o resultado.</p>
+        </div>
     </section>
 
     <footer>
